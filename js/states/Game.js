@@ -104,10 +104,10 @@ Game.prototype = {
 		console.log(bullet.bulletType, enemy.enemyType)
 		if (bullet.bulletType == enemy.enemyType) {
 			this.score += enemy.enemyValue;
-			this.scoreText.text = "Score: " + this.score;
-			bullet.kill();
+			this.scoreText.text = "Score: " + this.score;			
 			enemy.kill();
 		}
+		bullet.kill();
 	},
 	enemyCollision: function (player, enemy) {
 		enemy.kill();

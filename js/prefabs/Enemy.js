@@ -19,7 +19,7 @@ Enemy = function (game, type) {
     } else if ((type == "fly")) {
         let keyList = ["shipBeige_manned", "shipBlue_manned", "shipGreen_manned", "shipPink_manned", "shipYellow_manned"];
         key = keyList[game.rnd.integerInRange(0, keyList.length - 1)];
-        spawnPosition.x = game.world.height;
+        spawnPosition.x = game.world.centerY;
         spawnPosition.y = game.rnd.integerInRange(0, 1) * game.world.width;
         this.enemyValue = 50;
     } else if ((type == "red")) {
